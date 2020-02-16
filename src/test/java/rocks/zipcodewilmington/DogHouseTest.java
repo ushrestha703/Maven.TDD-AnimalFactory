@@ -17,7 +17,7 @@ public class DogHouseTest {
     @Test
     public void testGetNumberOfDogs() {
         // Given (some
-        String name = "Milo";
+        String name = "Odie";
         Date birthDate = new Date();
         Dog animal = AnimalFactory.createDog(name, birthDate);
         DogHouse.clear();
@@ -38,7 +38,7 @@ public class DogHouseTest {
 
     @Test
     public void addDogTest() {
-        Dog newDog = new Dog("Milo", new Date(), 1234);
+        Dog newDog = new Dog("Odie", new Date(), 1234);
         DogHouse.add(newDog);
         Assert.assertEquals(newDog, DogHouse.getDogById(1234));
     }
@@ -47,7 +47,7 @@ public class DogHouseTest {
 
     @Test
     public void removeDogById() {
-        Dog newDog = new Dog("Milo", new Date(), 1234);
+        Dog newDog = new Dog("Odie", new Date(), 1234);
         DogHouse.add(newDog);
         DogHouse.remove(1234);
         Assert.assertEquals(null, DogHouse.getDogById(1234));
@@ -57,7 +57,7 @@ public class DogHouseTest {
 
     @Test
     public void removeDogTest() {
-        Dog newDog = new Dog("Milo", new Date(), 1234);
+        Dog newDog = new Dog("Odie", new Date(), 1234);
         DogHouse.add(newDog);
         DogHouse.remove(newDog);
         Assert.assertEquals(null, DogHouse.getDogById(1234));
@@ -67,7 +67,7 @@ public class DogHouseTest {
 
     @Test
     public void getDogByIdTest() {
-        Dog newDog = new Dog("Milo", new Date(), 1234);
+        Dog newDog = new Dog("Odie", new Date(), 1234);
         DogHouse.add(newDog);
         Dog testDog = DogHouse.getDogById(1234);
         Assert.assertEquals(newDog, testDog);
@@ -77,9 +77,9 @@ public class DogHouseTest {
 
     @Test
     public void getNumberOfDogs() {
-        Dog newDog = new Dog("Milo", new Date(), 1234);
+        Dog newDog = new Dog("Odie", new Date(), 1234);
         DogHouse.add(newDog);
-        Dog newDog2 = new Dog("Odie", new Date(), 7890);
+        Dog newDog2 = new Dog("Oakley", new Date(), 7890);
         DogHouse.add(newDog2);
         Integer expected = 2;
         Integer actual = DogHouse.getNumberOfDogs();
