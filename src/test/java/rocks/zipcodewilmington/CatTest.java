@@ -39,10 +39,9 @@ public class CatTest {
     @Test
     public void setNameTest() {
         Cat newCat = new Cat("Zula", null, null);
-        String givenName = "Zula";
-        newCat.setName(givenName);
-        String catName = newCat.getName();
-        Assert.assertEquals(catName, givenName);
+        String actual = "Zula";
+        String expected = newCat.getName();
+        Assert.assertEquals(expected, actual);
     }
 
     // TODO - Create tests for `speak`
@@ -83,8 +82,8 @@ public class CatTest {
 
     @Test
     public void getIdTest() {
-        Cat newCat = new Cat(null, null, 52);
-        Integer expected = 52;
+        Cat newCat = new Cat(null, null, 1234);
+        Integer expected = 1234;
         Integer actual = newCat.getId();
         Assert.assertEquals(expected, actual);
     }
